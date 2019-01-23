@@ -1,0 +1,5 @@
+# Release build
+is_debug = false
+symbol_level = 0
+# macOS only supports x64
+target_cpu = "x64"

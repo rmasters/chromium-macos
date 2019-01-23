@@ -1,0 +1,13 @@
+# Sources:
+# Checking out and building Chromium for Mac https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md
+os: osx
+osx_image: xcode10.1  # We need at least macOS SDK 10.12
+addons:
+  artifacts:
+    working_dir: src/out/Default
+before_install:
+  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  - git config --global core.precomposeUnicode true
+script: sh build-release.sh
+install: true
+
